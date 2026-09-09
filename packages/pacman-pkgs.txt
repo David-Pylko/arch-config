@@ -29,6 +29,7 @@ fzf
 ghostscript
 gimp
 git
+github-cli
 grim
 gst-plugin-pipewire
 gvfs
