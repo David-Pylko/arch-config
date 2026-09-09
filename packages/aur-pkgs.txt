@@ -1,0 +1,13 @@
+acli-bin
+arduino-ide-bin
+bambustudio-appimage
+brother-hl-l3220cdw
+brother-hll2350dw
+debtap
+jadens-printer-driver
+logiops
+ltspice
+slack-desktop
+ttf-material-symbols-variable-git
+visual-studio-code-bin
+yay

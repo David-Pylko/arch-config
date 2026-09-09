@@ -1,0 +1,5 @@
+fish
+kitty
+tmux
+vim
+git

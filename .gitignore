@@ -1,0 +1,23 @@
+# Temporary and backup files
+*.bak
+*.old
+*.tmp
+*~
+*.swp
+*.swo
+.netrwhist
+
+# Logs and transient runtime state
+*.log
+nohup.out
+**/nohup.out
+touchpad.status
+
+# Fish universal variables (can contain sensitive or machine-specific tokens)
+fish_variables
+
+# OS & Editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
