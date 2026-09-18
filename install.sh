@@ -41,11 +41,11 @@ check_arch() {
 }
 
 install_terminal_packages() {
-    log_info "Installing terminal packages (fish, kitty, tmux, vim, fzf, fastfetch, git)..."
+    log_info "Installing terminal packages (fish, kitty, tmux, gvim, fzf, fastfetch, git)..."
     if [ -f "$REPO_DIR/packages/terminal-pkgs.txt" ]; then
-        sudo pacman -S --needed --noconfirm - < "$REPO_DIR/packages/terminal-pkgs.txt"
+        sudo pacman -S --needed - < "$REPO_DIR/packages/terminal-pkgs.txt"
     else
-        sudo pacman -S --needed --noconfirm fish kitty tmux vim fzf fastfetch git
+        sudo pacman -S --needed fish kitty tmux gvim fzf fastfetch git
     fi
     log_success "Terminal packages installed successfully."
 }
@@ -53,7 +53,7 @@ install_terminal_packages() {
 install_pacman_packages() {
     if [ -f "$REPO_DIR/packages/pacman-pkgs.txt" ]; then
         log_info "Installing official pacman packages from packages/pacman-pkgs.txt..."
-        sudo pacman -S --needed --noconfirm - < "$REPO_DIR/packages/pacman-pkgs.txt"
+        sudo pacman -S --needed - < "$REPO_DIR/packages/pacman-pkgs.txt"
         log_success "Pacman packages installed successfully."
     else
         log_warn "packages/pacman-pkgs.txt not found, skipping official package install."
@@ -67,11 +67,11 @@ ensure_aur_helper() {
         AUR_HELPER="paru"
     else
         log_warn "No AUR helper (yay/paru) found. Installing 'yay'..."
-        sudo pacman -S --needed --noconfirm base-devel git
+        sudo pacman -S --needed base-devel git
         local temp_dir
         temp_dir="$(mktemp -d)"
         git clone https://aur.archlinux.org/yay-bin.git "$temp_dir/yay-bin"
-        (cd "$temp_dir/yay-bin" && makepkg -si --noconfirm)
+        (cd "$temp_dir/yay-bin" && makepkg -si)
         rm -rf "$temp_dir"
         AUR_HELPER="yay"
         log_success "yay installed successfully."
@@ -82,7 +82,7 @@ install_aur_packages() {
     if [ -f "$REPO_DIR/packages/aur-pkgs.txt" ]; then
         ensure_aur_helper
         log_info "Installing AUR packages using $AUR_HELPER from packages/aur-pkgs.txt..."
-        "$AUR_HELPER" -S --needed --noconfirm - < "$REPO_DIR/packages/aur-pkgs.txt"
+        "$AUR_HELPER" -S --needed - < "$REPO_DIR/packages/aur-pkgs.txt"
         log_success "AUR packages installed successfully."
     else
         log_warn "packages/aur-pkgs.txt not found, skipping AUR package install."

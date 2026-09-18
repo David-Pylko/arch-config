@@ -12,7 +12,7 @@ arch-config/
 ├── packages/
 │   ├── pacman-pkgs.txt     # Explicitly installed native packages (pacman -Qqen)
 │   ├── aur-pkgs.txt        # Explicitly installed AUR packages (pacman -Qqem)
-│   └── terminal-pkgs.txt   # Core terminal utilities (fish, kitty, tmux, vim, etc.)
+│   └── terminal-pkgs.txt   # Core terminal utilities (fish, kitty, tmux, gvim, etc.)
 ├── home/
 │   └── .vimrc              # Symlinked to ~/.vimrc
 └── config/
@@ -70,7 +70,7 @@ cd ~/arch-config
 | Mode | Command Flag | What it Does |
 | :--- | :--- | :--- |
 | **Full Setup** | `./install.sh --all` | Installs all pacman + AUR packages, links all desktop & terminal configs, sets default shell |
-| **Terminal Setup Only** | `./install.sh --terminal` | Installs terminal packages (`fish`, `kitty`, `tmux`, `vim`, `fzf`, `fastfetch`), links terminal configs, sets shell |
+| **Terminal Setup Only** | `./install.sh --terminal` | Installs terminal packages (`fish`, `kitty`, `tmux`, `gvim`, `fzf`, `fastfetch`), links terminal configs, sets shell |
 | **Terminal Configs Only** | `./install.sh --terminal-links` | Symlinks `kitty`, `tmux`, `fish`, and `.vimrc` without installing packages |
 | **Desktop Configs Only** | `./install.sh --desktop-links` | Symlinks `hypr`, `waybar`, `mako`, `rofi`, `wofi` without installing packages |
 | **All Configs Only** | `./install.sh --links-only` | Symlinks all configs (desktop + terminal) without installing packages |
