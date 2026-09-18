@@ -107,6 +107,9 @@ nnoremap <leader>r :w<CR>:!./quick-flash.sh<CR>
 " Yank line, evaluate math expression, and paste result at end of line
 nnoremap <leader>= ^vg_"cyA = <esc>"=eval(@c)<CR>p:echo""<CR>
 
+" Keep clipboard active when closing vim (untested)
+autocmd VimLeave * call system("wl-copy", getreg('+'))
+
 " Highlight text on yanks
 augroup highlightYankedText
     autocmd!

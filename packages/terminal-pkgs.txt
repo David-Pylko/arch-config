@@ -1,5 +1,7 @@
 fish
 kitty
+vim-spell-en
 tmux
-vim
+gvim
 git
+
