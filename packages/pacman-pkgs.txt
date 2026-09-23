@@ -6,9 +6,12 @@ avr-libc
 avrdude
 base
 base-devel
+blender
 bluez
 bluez-utils
+bolt
 brightnessctl
+bun
 chromium
 cups
 cups-pk-helper
@@ -21,6 +24,7 @@ efibootmgr
 fastfetch
 feh
 fish
+fprintd
 fwupd
 fzf
 ghostscript
@@ -36,6 +40,7 @@ hypridle
 hyprland
 hyprlock
 hyprpaper
+hyprpolkitagent
 hyprshot
 hyprshutdown
 impala

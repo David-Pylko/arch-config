@@ -4,9 +4,10 @@ bambustudio-appimage
 brother-hl-l3220cdw
 brother-hll2350dw
 debtap
+dnspyex-wine-bin
 jadens-printer-driver
 logiops
-ltspice
+shopify-cli
 slack-desktop
 ttf-material-symbols-variable-git
 visual-studio-code-bin

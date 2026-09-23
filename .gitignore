@@ -15,6 +15,7 @@ touchpad.status
 
 # Fish universal variables (can contain sensitive or machine-specific tokens)
 fish_variables
+config/fish/completions/copilot.fish
 
 # OS & Editor artifacts
 .DS_Store
