@@ -247,7 +247,8 @@
 
   "clock#date": {
     "format": "󰨳 {:%m-%d}",
-    "tooltip-format": "<tt>{calendar}</tt>",
+    // "tooltip-format": "<tt>{calendar}</tt>",
+    "tooltip-format": "<tt><span font_desc='JetBrains Mono 12'>{calendar}</span></tt>",
 
     "calendar": {
       "mode": "month",
@@ -258,7 +259,7 @@
         "months": 
           "<span color='#b4befe'><b>{}</b></span>",
         "weekdays": 
-          "<span color='#a6adc8' font_desc='JetBrains Mono 7'>{}</span>",
+          "<span color='#a6adc8'><b>{}</b></span>",
         "today": 
           "<span color='#f38ba8'><b>{}</b></span>"
       }

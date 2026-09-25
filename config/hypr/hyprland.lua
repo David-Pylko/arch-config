@@ -37,7 +37,7 @@ local terminal = "kitty"
 
 local fileManager = "dolphin"
 
-local menu = "wofi --show drun"
+local menu = "wofi"
 
 local browser = "chromium"
 
@@ -518,7 +518,8 @@ hl.window_rule({
   match = { 
     class = "code" 
   },
-  workspace = "7"
+  workspace = "7",
+  no_initial_focus = true
 })
 
 
